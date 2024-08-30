@@ -4,25 +4,32 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
-<h1>{{ title }}</h1>
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+<table class="header">
+  <tr>
+    <td colspan="8" class="width-auto">
+      <h1 class="title">{{ title }}</h1>
+      <span class="subtitle">{{ description }}</span>
+    </td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class=""><a href="{{ metadata.author.url }}"><cite>{{ author or  metadata.author.name }}</cite></a></td>
+    
+	  <th class="width-min">Published</th>
+    <td class="">{{ page.date | readableDate }}</td>
+  </tr>
+  <tr>
+	  <th class="width-min">Category</th>
+    <td colspan="4">
+      <ul class="post-metadata">
+      {%- for tag in tags | filterTagList %}
+      {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+      <li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+      {%- endfor %}
+      </ul>
+    </td>
+  </tr>
+</table>
 
 {{ content | safe }}
-
-{%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-{%- endif %}

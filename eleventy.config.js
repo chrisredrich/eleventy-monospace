@@ -41,7 +41,7 @@ module.exports = function(eleventyConfig) {
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "LLL dd yyyy");
 	});
 
 	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
@@ -86,7 +86,7 @@ module.exports = function(eleventyConfig) {
 				placement: "after",
 				class: "header-anchor",
 				symbol: "#",
-				ariaHidden: false,
+				ariaHidden: true,
 			}),
 			level: [1,2,3,4],
 			slugify: eleventyConfig.getFilter("slugify")
@@ -96,6 +96,10 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
 	})
+
+	eleventyConfig.addShortcode("copyrightDate", () => {
+		return (new Date()).getFullYear();
+	});
 
 	// Features to make your build faster (when you need them)
 

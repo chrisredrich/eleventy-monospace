@@ -46,6 +46,10 @@ module.exports = function(eleventyConfig) {
 			decoding: "async",
 		};
 
-		return eleventyImage.generateHTML(metadata, imageAttributes);
+		console.log(metadata)
+
+		// return eleventyImage.generateHTML(metadata, imageAttributes);
+		//let data = metadata.jpeg[metadata.jpeg.length - 1];
+		return `<figure><img src="${metadata.webp[0].url}" alt="${alt}"><figcaption aria-hidden="true">${alt}</figcaption></figure>`;
 	});
 };

@@ -1,10 +1,8 @@
-# eleventy-base-blog v8
+# eleventy-monospace-web
 
-A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v2.0 release](https://www.11ty.dev/blog/eleventy-v2/)).
+A starter blog using [Eleventy](https://www.11ty.dev/) and [The Monospace Web](https://github.com/owickstrom/the-monospace-web) by Oskar Wickström. This project was built starting with [eleventy-base-blog v8](https://github.com/11ty/eleventy-base-blog) and adapting Oskar Wickström's The Monospace Web to create a statically generated blog.
 
 ## Getting Started
-
-* [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
 
 1. Make a directory and navigate to it:
 
@@ -44,7 +42,7 @@ npx @11ty/eleventy --serve
 Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the internals.
 
 ## Features
-
+- Type `debug` on any page to view the grid for debugging layout issues. Or just to admire the beautify and perfection of the monospace web.
 - Using [Eleventy v2.0](https://www.11ty.dev/blog/eleventy-v2/) with zero-JavaScript output.
 	- Content is exclusively pre-rendered (this is a static site).
 	- Can easily [deploy to a subfolder without changing any content](https://www.11ty.dev/docs/plugins/html-base/)
@@ -76,27 +74,8 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 	- Home, Archive, and About pages.
 	- [Feeds for Atom and JSON](https://www.11ty.dev/docs/plugins/rss/)
 	- `sitemap.xml`
-	- Zero-maintenance tag pages ([View on the Demo](https://eleventy-base-blog.netlify.app/tags/))
+	- Zero-maintenance tag pages
 	- Content not found (404) page
-
-## Demos
-
-- [Netlify](https://eleventy-base-blog.netlify.app/)
-- [Vercel](https://demo-base-blog.11ty.dev/)
-- [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
-- [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
-- [Cloudflare Pages](https://eleventy-base-blog-d2a.pages.dev/)
-
-## Deploy this to your own site
-
-Deploy this Eleventy site in just a few clicks on these services:
-
-- [Deploy this to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/11ty/eleventy-base-blog)
-- [Deploy this to **Vercel**](https://vercel.com/import/project?template=11ty%2Feleventy-base-blog)
-- Look in `.github/workflows/gh-pages.yml.sample` for information on Deploying to **GitHub Pages**.
-- [Try it out on **Stackblitz**](https://stackblitz.com/github/11ty/eleventy-base-blog)
-- If you run Eleventy locally you can drag your `_site` folder to [`netlify.com/drop`](https://netlify.com/drop) to upload it without using `git`.
-- Read more about [Deploying an Eleventy project](https://www.11ty.dev/docs/deployment/) to the web.
 
 ### Implementation Notes
 

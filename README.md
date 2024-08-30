@@ -1,6 +1,6 @@
 # eleventy-monospace-web
 
-A starter blog using [Eleventy](https://www.11ty.dev/) and [The Monospace Web](https://github.com/owickstrom/the-monospace-web) by Oskar Wickström. This project forks [eleventy-base-blog v8](https://github.com/11ty/eleventy-base-blog) and adds Oskar Wickström's The Monospace Web to create a statically generated monospace blog theme.
+A starter blog using [Eleventy](https://www.11ty.dev/) and [The Monospace Web](https://github.com/owickstrom/the-monospace-web) by Oskar Wickström. This project forks [eleventy-base-blog v8](https://github.com/11ty/eleventy-base-blog) and adds Oskar Wickström's The Monospace Web to create a statically generated monospace blog .
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ cd my-blog-name
 2. Clone this Repository
 
 ```
-git clone https://github.com/11ty/eleventy-base-blog.git .
+git clone https://github.com/chrisredrich/eleventy-monospace.git .
 ```
 
 _Optional:_ Review `eleventy.config.js` and `_data/metadata.js` to configure the site’s options and data.

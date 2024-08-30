@@ -1,6 +1,6 @@
 # eleventy-monospace-web
 
-A starter blog using [Eleventy](https://www.11ty.dev/) and [The Monospace Web](https://github.com/owickstrom/the-monospace-web) by Oskar Wickström. This project was built starting with [eleventy-base-blog v8](https://github.com/11ty/eleventy-base-blog) and adapting Oskar Wickström's The Monospace Web to create a statically generated blog.
+A starter blog using [Eleventy](https://www.11ty.dev/) and [The Monospace Web](https://github.com/owickstrom/the-monospace-web) by Oskar Wickström. This project forks [eleventy-base-blog v8](https://github.com/11ty/eleventy-base-blog) and adds Oskar Wickström's The Monospace Web to create a statically generated monospace blog theme.
 
 ## Getting Started
 
